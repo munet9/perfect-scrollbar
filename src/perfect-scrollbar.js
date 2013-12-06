@@ -60,8 +60,8 @@
       if (option === 'update') {
         if ($this.data('perfect-scrollbar-update')) {
           $this.data('perfect-scrollbar-update')();
+          return $this;
         }
-        return $this;
       }
       else if (option === 'destroy') {
         if ($this.data('perfect-scrollbar-destroy')) {
