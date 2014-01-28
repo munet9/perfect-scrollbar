@@ -585,7 +585,11 @@
           bindKeyboardHandler();
         }
         $this.data('perfect-scrollbar', $this);
-        $this.data('perfect-scrollbar-update', updateBarSizeAndPosition);
+        $this.data('perfect-scrollbar-update', function () {
+          $this.scrollLeft(0);
+          $this.scrollTop(0);
+          updateBarSizeAndPosition();
+        });
         $this.data('perfect-scrollbar-destroy', destroy);
       };
 
